@@ -66,13 +66,14 @@ button {
 button:hover {
   background-color: #357ae8;
   transform: translateY(-2px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.25);
 }
 
 button:active {
-  transform: translateY(0);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   transform: translateY(0);
+   box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 
 ul {
   list-style: none;
@@ -94,6 +95,18 @@ li {
   color: #ff5c5c;
   font-size: 18px;
   padding: 0 6px;
+}
+
+.delete-btn:hover {
+  background: transparent;
+  color: #ff5c5c;
+  transform: none;
+  box-shadow: none;
+}
+
+.delete-btn:active {
+  transform: none;
+  box-shadow: none;
 }
 
 .filters {
@@ -120,5 +133,15 @@ li {
 }
 
 .clear {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: #8b949e;
+}
+
+li span {
   cursor: pointer;
 }
