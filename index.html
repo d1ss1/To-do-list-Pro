@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="todo-container">
+    <h1>TASKS</h1>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter new mission..." />
+      <button id="addBtn">ADD</button>
+    </div>
+
+    <div class="filters">
+      <span class="active">All</span>
+      <span>Active</span>
+      <span>Completed</span>
+    </div>
+
+    <ul id="taskList">
+      <li>
+        <span>Sample Task (Delete me)</span>
+        <button class="delete-btn">×</button>
+      </li>
+    </ul>
+
+    <div class="footer">
+      <span id="counter">1 task left</span>
+      <span class="clear">Clear completed</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
