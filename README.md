@@ -1,8 +1,8 @@
-# Mission Control | To-Do List
+# Mission Control | To-Do List 📝 
 
 A minimalist, dark-themed To-Do List application built with pure HTML, CSS, and JavaScript. Designed as a strict task-management tool without unnecessary visual noise.
 
-## 🚀 Features
+## ✨ Features
 
 * **Add Tasks:** Create new tasks via the 'ADD' button or by pressing `Enter`.
 * **Complete Tasks:** Click on any task text to toggle its completion status.
@@ -12,7 +12,7 @@ A minimalist, dark-themed To-Do List application built with pure HTML, CSS, and 
 * **Smart Counter:** The task counter updates dynamically based on the active filter.
 * **Local Storage:** All tasks and their statuses are saved in the browser's memory, ensuring no data is lost upon refresh.
 
-## 💻 Tech Stack
+## 🛠 Tech Stack
 
 * **HTML5**
 * **CSS3** (Flexbox, custom styling, animations)
@@ -30,3 +30,6 @@ During this project, I strengthened my understanding of:
 2. Event listeners and Event delegation (`event.target`).
 3. Browser storage (`localStorage.setItem` / `getItem`).
 4. Logic structuring (managing state between counter, filters, and stored data).
+
+### 🚀 Live Demo
+[https://d1ss1.github.io/To-do-list-Pro/]
