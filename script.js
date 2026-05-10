@@ -6,7 +6,7 @@ const counter = document.getElementById('counter')
 console.log('Loading')
 
 function addTask() {
-  const text = taskInput.value;
+  const text = taskInput.value.trim();
   
   if (text === '') {
     alert('Enter a task');
@@ -23,6 +23,7 @@ const li = document.createElement('li');
  taskList.appendChild(li);
  taskInput.value = '';
  updateCounter();
+ saveData();
 }
 
 addBtn.addEventListener('click', addTask);
@@ -36,10 +37,13 @@ taskInput.addEventListener('keydown', function(event) {
 taskList.addEventListener('click', function(event) {
   if (event.target.classList.contains('delete-btn')) {
     event.target.parentElement.remove();
-    updateCounter(); }
+    updateCounter();
+    saveData();
+  }
   else if (event.target.tagName === 'SPAN') {
     event.target.classList.toggle('completed')
     updateCounter();
+    saveData();
   }
 });
 
@@ -59,4 +63,17 @@ function updateCounter() {
   } else {
     counter.textContent = activeCount + ' tasks left';
   }
+};
+
+function saveData() {
+  localStorage.setItem("data", taskList.innerHTML);
+}
+
+const savedData = localStorage.getItem("data")
+
+if (savedData) {
+  taskList.innerHTML = savedData;
+}
+
+updateCounter();
 };
