@@ -145,3 +145,7 @@ li {
 li span {
   cursor: pointer;
 }
+
+.hidden {
+  display: none !important;
+}
