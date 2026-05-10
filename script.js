@@ -3,6 +3,7 @@ const addBtn = document.getElementById('addBtn');
 const taskList = document.getElementById('taskList');
 const counter = document.getElementById('counter');
 const filterSpans = document.querySelectorAll('.filters span');
+const clearBtn = document.querySelector('.clear')
 
 console.log('Loading')
 
@@ -133,4 +134,13 @@ filterSpans.forEach(function(span){
       }
     });
   });
+});
+
+clearBtn.addEventListener('click', function(){
+  const completedSpans = taskList.querySelectorAll('.completed')
+  completedSpans.forEach(function(span) {
+    span.parentElement.remove();
+  });
+  updateCounter();
+  saveData();
 });
